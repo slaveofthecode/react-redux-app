@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <header>
+        <h1>My React-Redux-App</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          simple example using react-redux with toolkit (
+          <em>@reduxjs/toolkit</em>)
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <hr />
+      <nav>
+        <ul>
+          <li>
+            <a href="/">home</a>
+          </li>
+          <li>
+            <a href="/about">about</a>
+          </li>
+          <li>
+            <a href="/contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+      <footer>
+        <p>
+          <small>
+            <em>© 2021</em>
+          </small>
+        </p>
+      </footer>
     </div>
   );
 }

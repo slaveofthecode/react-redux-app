@@ -1,35 +1,29 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Menu from './components/common/menu';
+import Footer from './components/common/footer';
+import Header from './components/common/header';
+import Content from './components/common/content';
+
 function App() {
   return (
     <div>
-      <header>
-        <h1>My React-Redux-App</h1>
-        <p>
-          simple example using react-redux with toolkit (
-          <em>@reduxjs/toolkit</em>)
-        </p>
-      </header>
+      <Header />
       <hr />
-      <nav>
-        <ul>
-          <li>
-            <a href="/">home</a>
-          </li>
-          <li>
-            <a href="/about">about</a>
-          </li>
-          <li>
-            <a href="/contact">contact</a>
-          </li>
-        </ul>
-      </nav>
+      <Menu />
       <hr />
-      <footer>
-        <p>
-          <small>
-            <em>© 2021</em>
-          </small>
-        </p>
-      </footer>
+      <Content>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<div>404</div>} />
+        </Routes>
+      </Content>
+      <hr />
+      <Footer />
     </div>
   );
 }

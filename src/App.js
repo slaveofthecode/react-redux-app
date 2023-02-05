@@ -1,14 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, About, Contact } from './pages';
-import { Menu, Footer, Header, Content } from './components';
+import { Footer, Header, Content } from './components';
 
 function App() {
   return (
-    <div>
+    <div className="container my-2 ">
       <Header />
-      <hr />
-      <Menu />
-      <hr />
       <Content>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,7 +14,6 @@ function App() {
           <Route path="*" element={<div>404</div>} />
         </Routes>
       </Content>
-      <hr />
       <Footer />
     </div>
   );

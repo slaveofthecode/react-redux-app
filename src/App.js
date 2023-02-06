@@ -1,19 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Menu from './components/common/menu';
-import Footer from './components/common/footer';
-import Header from './components/common/header';
-import Content from './components/common/content';
+import { Home, About, Contact } from './pages';
+import { Footer, Header, Content } from './components';
 
 function App() {
   return (
-    <div>
+    <div className="container my-2 ">
       <Header />
-      <hr />
-      <Menu />
-      <hr />
       <Content>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +14,6 @@ function App() {
           <Route path="*" element={<div>404</div>} />
         </Routes>
       </Content>
-      <hr />
       <Footer />
     </div>
   );

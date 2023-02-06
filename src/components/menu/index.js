@@ -6,9 +6,9 @@ const NAVLINK_EXPLAIN = `A <NavLink> is a special type of <Link> that will add s
 
 const index = () => {
   return (
-    <div>
-      {renderMenuLink()}
-      {renderMenuNavLink()}
+    <div className="row">
+      <div className="col-md-6">{renderMenuLink()}</div>
+      <div className="col-md-6">{renderMenuNavLink()}</div>
     </div>
   );
 };
@@ -17,23 +17,20 @@ export default index;
 
 function renderMenuLink() {
   return (
-    <div>
-      <div>
-        Using <strong>Link</strong> from <em>react-router-dom</em>
-        <details>
-          <summary>...</summary>
-          <p>{LINK_EXPLAIN}</p>
-        </details>
-      </div>
+    <div className="d-flex justify-content-start align-items-center position-relative">
+      <span className="mx-2">
+        <i className="bi bi-info-circle tooltip-sibling"></i>
+        <small>{LINK_EXPLAIN}</small>
+      </span>
       <nav>
-        <ul>
-          <li>
+        <ul className="d-flex justify-content-start align-items-center">
+          <li className="p-2">
             <Link to="/">home</Link>
           </li>
-          <li>
+          <li className="p-2">
             <Link to="/about">about</Link>
           </li>
-          <li>
+          <li className="p-2">
             <Link to="/contact">contact</Link>
           </li>
         </ul>
@@ -52,17 +49,14 @@ function renderMenuNavLink() {
     }
   };
   return (
-    <div>
-      <div>
-        Using <strong>NavLink</strong> from <em>react-router-dom</em>
-        <details>
-          <summary>...</summary>
-          <p>{NAVLINK_EXPLAIN}</p>
-        </details>
-      </div>
+    <div className="d-flex justify-content-start align-items-center position-relative">
+      <span className="mx-2">
+        <i className="bi bi-info-circle tooltip-sibling"></i>
+        <small>{NAVLINK_EXPLAIN}</small>
+      </span>
       <nav>
-        <ul>
-          <li>
+        <ul className="d-flex justify-content-start align-items-center">
+          <li className="p-2">
             <NavLink
               to="/"
               style={({ isActive }) =>
@@ -72,7 +66,7 @@ function renderMenuNavLink() {
               home
             </NavLink>
           </li>
-          <li>
+          <li className="p-2">
             <NavLink
               to="/about"
               style={({ isActive }) =>
@@ -82,7 +76,7 @@ function renderMenuNavLink() {
               about
             </NavLink>
           </li>
-          <li>
+          <li className="p-2">
             <NavLink
               to="/contact"
               style={({ isActive }) =>

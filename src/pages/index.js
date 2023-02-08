@@ -1,5 +1,5 @@
-import About from './about';
+import AddTodo from './addTodo';
 import Contact from './contact';
-import Home from './home';
+import Todos from './todos';
 
-export { About, Contact, Home };
+export { AddTodo, Contact, Todos };

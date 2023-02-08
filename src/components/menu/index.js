@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import { ROUTE } from '../../enums/routes';
 
 const LINK_EXPLAIN = `A <Link> is an element that lets the user navigate to another page by clicking or tapping on it. In react-router-dom, a <Link> renders an accessible <a> element with a real href that points to the resource it's linking to. This means that things like right-clicking a <Link> work as you'd expect. You can use <Link reloadDocument> to skip client side routing and let the browser handle the transition normally (as if it were an <a href>).`;
 
@@ -25,10 +26,10 @@ function renderMenuLink() {
       <nav>
         <ul className="d-flex justify-content-start align-items-center">
           <li className="p-2">
-            <Link to="/">home</Link>
+            <Link to={ROUTE.HOME}>TODOS</Link>
           </li>
           <li className="p-2">
-            <Link to="/about">about</Link>
+            <Link to={ROUTE.TODO_ADD}>ADD</Link>
           </li>
           <li className="p-2">
             <Link to="/contact">contact</Link>
@@ -58,22 +59,22 @@ function renderMenuNavLink() {
         <ul className="d-flex justify-content-start align-items-center">
           <li className="p-2">
             <NavLink
-              to="/"
+              to={ROUTE.HOME}
               style={({ isActive }) =>
                 isActive ? linkStyle.active : linkStyle.inactive
               }
             >
-              home
+              TODOS
             </NavLink>
           </li>
           <li className="p-2">
             <NavLink
-              to="/about"
+              to={ROUTE.TODO_ADD}
               style={({ isActive }) =>
                 isActive ? linkStyle.active : linkStyle.inactive
               }
             >
-              about
+              ADD
             </NavLink>
           </li>
           <li className="p-2">
